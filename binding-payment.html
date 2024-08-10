@@ -530,7 +530,7 @@
     .button {
       --height: 4rem;
     }
-  }</style></head><body><section class="binding"><div class="binding__wrapper">#if(!$!CARD_BIN)<form class="binding__form" action="${ACTION}" method="post"><input name="${CARDHOLDER}" type="hidden" value="CARDHOLDER NAME"><div class="binding__form-wrapper"><div class="inputs input" data-input><div class="input__wrapper"><input tabindex="1" id="card-number" class="input__target" name="${CARDNO}" type="text" data-input-target> <span class="input__label">Номер карты</span></div></div><div class="binding__form-row"><div class="binding__form-date"><div class="binding__input-date inputs input" data-input><div class="input__wrapper"><input tabindex="2" id="month" class="input__target" name="${EXPMONTH}" type="tel" data-input-target> <span class="input__label">ММ</span></div></div><strong>/</strong><div class="binding__input-date inputs input" data-input><div class="input__wrapper"><input tabindex="3" id="year" class="input__target" name="${EXPYEAR}" type="tel" data-input-target> <span class="input__label">ГГ</span></div></div></div><div class="binding__form-cvc"><span class="binding__subtext">Три цифры<br>с обратной<br>стороны</span><div class="binding__input-cvc inputs input" data-input><div class="input__wrapper"><input tabindex="4" id="cvv" class="input__target" name="${CVV2}" type="text" autocomplete="off" data-input-target> <span class="input__label">CVC</span></div></div></div></div></div>$!{INTERNAL_SECTION} #if($!card_error)<div class="binding__error">$!card_error</div>#end <button class="binding__submit button" type="submit" onclick="return isFormValid()"><span>Оплатить</span></button></form>#else<form class="binding__form" action="${ACTION}" method="post"><div class="binding__form-wrapper"><div class="inputs input filled no-edit" data-input><div class="input__wrapper"><input disabled="disabled" class="input__target" type="text" value="$!CARD_BIN** **** $!CARD_LAST4DIGITS" data-input-target> <span class="input__label">Номер карты</span></div></div><div class="binding__form-row"><div class="binding__form-date"><div class="binding__input-date inputs input filled no-edit" data-input><div class="input__wrapper"><input disabled="disabled" id="month" class="input__target" type="tel" value="$!EXPMONTH_VALUE" data-input-target> <span class="input__label">ММ</span></div></div><strong>/</strong><div class="binding__input-date inputs input filled no-edit" data-input><div class="input__wrapper"><input disabled="disabled" id="year" class="input__target" type="tel" value="$!EXPYEAR_VALUE" data-input-target> <span class="input__label">ГГ</span></div></div></div><div class="binding__form-cvc"><span class="binding__subtext">Три цифры<br>с обратной<br>стороны</span><div class="binding__input-cvc inputs input" data-input><div class="input__wrapper"><input id="cvv" name="${CVV2}" class="input__target" type="text" data-input-target> <span class="input__label">CVC</span></div></div></div></div></div>$!{INTERNAL_SECTION} #if($!card_error)<div class="binding__error">$!card_error</div>#end <button disabled="disabled" class="binding__submit button button_disabled" type="submit" onclick="return isFormValid()"><span>Оплатить</span></button></form>#end</div></section><script src="https://unpkg.com/imask"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script><script>const idInputs = {
+  }</style></head><body><section class="binding"><div class="binding__wrapper">#if(!$!CARD_BIN)<form class="binding__form" action="${ACTION}" method="post"><input name="${CARDHOLDER}" type="hidden" value="CARDHOLDER NAME"><div class="binding__form-wrapper"><div class="inputs input" data-input><div class="input__wrapper"><input tabindex="1" id="card-number" class="input__target" name="${CARDNO}" type="text" data-input-target> <span class="input__label">Номер карты</span></div></div><div class="binding__form-row"><div class="binding__form-date"><div class="binding__input-date inputs input" data-input><div class="input__wrapper"><input tabindex="2" id="month" class="input__target" name="${EXPMONTH}" type="tel" data-input-target> <span class="input__label">ММ</span></div></div><strong>/</strong><div class="binding__input-date inputs input" data-input><div class="input__wrapper"><input tabindex="3" id="year" class="input__target" name="${EXPYEAR}" type="tel" data-input-target> <span class="input__label">ГГ</span></div></div></div><div class="binding__form-cvc"><span class="binding__subtext">Три цифры<br>с обратной<br>стороны</span><div class="binding__input-cvc inputs input" data-input><div class="input__wrapper"><input tabindex="4" id="cvv" class="input__target" name="${CVV2}" type="text" autocomplete="off" data-input-target> <span class="input__label">CVC</span></div></div></div></div></div>$!{INTERNAL_SECTION} #if($!card_error)<div class="binding__error">$!card_error</div>#end <button class="binding__submit button" type="submit" onclick="return isFormValid()"><span>Оплатить</span></button></form>#else<form class="binding__form" action="${ACTION}" method="post"><div class="binding__form-wrapper"><div class="inputs input filled no-edit" data-input><div class="input__wrapper"><input disabled="disabled" class="input__target" type="text" value="$!CARD_BIN** **** $!CARD_LAST4DIGITS" data-input-target> <span class="input__label">Номер карты</span></div></div><div class="binding__form-row"><div class="binding__form-date"><div class="binding__input-date inputs input filled no-edit" data-input><div class="input__wrapper"><input disabled="disabled" id="month" class="input__target" type="tel" value="$!EXPMONTH_VALUE" data-input-target> <span class="input__label">ММ</span></div></div><strong>/</strong><div class="binding__input-date inputs input filled no-edit" data-input><div class="input__wrapper"><input disabled="disabled" id="year" class="input__target" type="tel" value="$!EXPYEAR_VALUE" data-input-target> <span class="input__label">ГГ</span></div></div></div><div class="binding__form-cvc"><span class="binding__subtext">Три цифры<br>с обратной<br>стороны</span><div class="binding__input-cvc inputs input" data-input><div class="input__wrapper"><input id="cvv" name="${CVV2}" class="input__target" type="text" data-input-target> <span class="input__label">CVC</span></div></div></div></div></div>$!{INTERNAL_SECTION} #if($!card_error)<div class="binding__error">$!card_error</div>#end <button disabled="disabled" class="binding__submit button button_disabled" type="submit" onclick="return isFormValid()"><span>Оплатить</span></button></form>#end</div></section><script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script><script>const idInputs = {
     cardNumber: '#card-number',
     month: '#month',
     year: '#year',
@@ -546,7 +546,7 @@
     parentInput: 'data-input',
   };
 
-  const inputsIMaskObject = {};
+  const cleaveInstanceInput = {};
 
   const tabindexInputs = () => {
     // Перемещает фокус к предыдущему input[tabindex] если input пуст
@@ -597,18 +597,22 @@
     let nextTabindex = input.getAttribute('tabindex');
     nextTabindex = nextTabindex ? ++nextTabindex : null;
 
-    const mask = IMask(input, {
-      mask: pattern,
+    const cleave = new Cleave(input, {
+      blocks: pattern,
+      delimiter: ' ',
+      numericOnly: true,
+
+      onValueChanged: function (e) {
+        const maxLength = this.properties.maxLength;
+        const rawValue = e.target.rawValue.length;
+
+        if (maxLength === rawValue) focusNextTabindexInput(nextTabindex);
+      },
     });
 
-    inputsIMaskObject[id] = mask;
+    cleaveInstanceInput[id] = cleave;
 
-    input.addEventListener('input', () => {
-      if (!mask.masked.isComplete) return;
-      focusNextTabindexInput(nextTabindex);
-    });
-
-    return { input, nextTabindex };
+    return { input, cleave };
   };
 
   const focusNextTabindexInput = (nextTabindex) => {
@@ -632,44 +636,20 @@
     if (parent) parent.classList.remove(cls.error);
   };
 
-  const testObject = {};
-
   const cardNumberMask = () => {
-    const input = document.querySelector(idInputs.cardNumber);
-    if (!input) return;
-
-    let nextTabindex = input.getAttribute('tabindex');
-    nextTabindex = nextTabindex ? ++nextTabindex : null;
-
-    const cleave = new Cleave(input, {
-      blocks: [4, 4, 4, 4, 3],
-      delimiter: ' ',
-      numericOnly: true,
-
-      onValueChanged: function (e) {
-        const maxLength = this.properties.maxLength;
-        const rawValue = e.target.rawValue.length;
-
-        if (maxLength === rawValue) {
-          testObject[idInputs.cardNumber] = true;
-          focusNextTabindexInput(nextTabindex);
-        } else testObject[idInputs.cardNumber] = false;
-      },
-    });
-
-    console.log(cleave);
+    getInput(idInputs.cardNumber, [4, 4, 4, 4, 3]);
   };
 
   const cardMonthMask = () => {
-    const { input, nextTabindex } = getInput(idInputs.month, '00');
+    getInput(idInputs.month, [2]);
   };
 
   const cardYearMask = () => {
-    const { input, nextTabindex } = getInput(idInputs.year, '00');
+    getInput(idInputs.year, [2]);
   };
 
   const cardCVVMask = () => {
-    const { input, nextTabindex } = getInput(idInputs.cvv, '000');
+    getInput(idInputs.cvv, [3]);
   };
 
   // Валидация формы
@@ -682,12 +662,14 @@
     let inputMonth = null;
     let inputYear = null;
 
-    for (key in inputsIMaskObject) {
-      const imask = inputsIMaskObject[key];
-      const input = imask.el.input;
-      const maskIsComplete = imask.masked.isComplete;
+    for (key in cleaveInstanceInput) {
+      const cleave = cleaveInstanceInput[key];
+      const input = cleave.element;
+      const inputValue = cleave.getRawValue();
+      const inputValueLength = inputValue.length;
+      const maxLength = cleave.properties.maxLength;
 
-      if (!maskIsComplete) {
+      if (inputValueLength !== maxLength) {
         valid = false;
         setErrorForInputParent(input);
         break;
@@ -695,12 +677,12 @@
 
       if (key === idInputs.month) {
         inputMonth = input;
-        month = imask.unmaskedValue - 1;
+        month = inputValue - 1;
       }
 
       if (key === idInputs.year) {
         inputYear = input;
-        year += imask.unmaskedValue; //конкатенация первых двух и вводимых цифр
+        year += inputValue; //конкатенация первых двух и вводимых цифр
       }
     }
 
