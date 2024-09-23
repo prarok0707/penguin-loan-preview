@@ -546,7 +546,7 @@
     parentInput: 'data-input',
   };
 
-  const cleaveInstanceInput = {};
+  const cleaveInstance = {};
 
   const tabindexInputs = () => {
     // Перемещает фокус к предыдущему input[tabindex] если input пуст
@@ -610,7 +610,7 @@
       },
     });
 
-    cleaveInstanceInput[id] = cleave;
+    cleaveInstance[id] = cleave;
 
     return { input, cleave };
   };
@@ -662,8 +662,8 @@
     let inputMonth = null;
     let inputYear = null;
 
-    for (key in cleaveInstanceInput) {
-      const cleave = cleaveInstanceInput[key];
+    for (key in cleaveInstance) {
+      const cleave = cleaveInstance[key];
       const input = cleave.element;
       const inputValue = cleave.getRawValue();
       const inputValueLength = inputValue.length;
